@@ -8,8 +8,8 @@
 ```
    > components
    > data
-   > configs
-   > services
+     > configs
+     > services
    > ducks
    > hooks
    > pages
