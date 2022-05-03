@@ -71,4 +71,35 @@ export default {
 
 ## REDUX-TOOLKIT CONFIGURATION
 
-10. Under the `ducks` folder, create a file and name it as `store.js` to configure our redux store, and write the code below:
+10. Under the `ducks` folder, create a file and name it as `store.js` to configure our redux store, and, initially, write the code below:
+
+```js
+import { configureStore } from "@reduxjs/toolkit";
+
+export default configureStore({
+  reducer: {},
+});
+```
+
+11. Let's modify our `index.js` file so we can wrap our application using the `Provider` Component from `react-redux`. This is how it should look like:
+
+```js
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { Provider } from "react-redux";
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import store from "./ducks/store";
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(
+  <React.StrictMode>
+    <Provider store={store}>
+      <App />
+    </Provider>
+  </React.StrictMode>
+);
+
+reportWebVitals();
+```
