@@ -15,4 +15,12 @@
    > pages
 ```
 
-5.
+5. under `data/` folder, create a file and call it `constants.js`. Inside this file, write the following code :
+
+```js
+export const REQUEST_TIMEOUT_SECONDS: number = 30;
+
+export const JSON_PLACEHOLDER_ENDPOINTS: Object = {
+  LIST_OF_TODOS: "/todos",
+};
+```
